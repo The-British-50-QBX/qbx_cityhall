@@ -30,7 +30,7 @@ lib.callback.register('qbx_cityhall:server:requestId', function(source, item, ha
     if not player then return end
     local itemType = sharedConfig.cityhalls[hall].licenses[item]
 
-    if itemType.item ~= 'id_card' and itemType.item ~= 'driver_license' and itemType.item ~= 'weaponlicense' then
+    if itemType.item ~= 'id_card' and itemType.item ~= 'driver_license' and itemType.item ~= 'weaponlicense' and itemType.item ~= 'huntinglicense' then
         return exports.qbx_core:Notify(source, locale('error.invalid_type'), 'error')
     end
 
